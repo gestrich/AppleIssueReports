@@ -17,6 +17,9 @@ let package = Package(
         .target(
             name: "CustomCompilerPackage",
             publicHeadersPath: "."
+//            cSettings: [
+//               .unsafeFlags(["-Werror=empty-body"])
+//            ]
         )
     ]
 )

@@ -30,3 +30,17 @@ This assumes you are have an alternate LLVM toolchain installed. This example us
 * xcodebuild -scheme CustomCompilerProject -toolchain org.llvm.17.0.6 COMPILER_INDEX_STORE_ENABLE=NO
 * Build will complete successfully.
 * Note that in the build logs `-index-store-path` is _not_ being used. The passed settings was respected.
+
+
+### Other Related Behavior
+
+xcodebuild clean -scheme CustomCompilerProject && xcodebuild -scheme CustomCompilerProject -toolchain org.llvm.17.0.6 COMPILER_INDEX_STORE_ENABLE=NO OTHER_CFLAGS="-Werror=empty-body" | grep "HelloWorld.o"
+
+* Build From Xcode: Build Settings are not propogated to Swift Package.
+* Build From Xcode: C-Flags are not propogated to Swift Package.
+* Build From Command Line: Command-line build settings are used in Package Clang commands (when building project)
+* Build From Command Line: Command line C-Flags are used in Package Clang commands (when building project)
+* You can also set C-Flags in the Package.swift
+* Note that when building projects both from the command line and Xcode, there are default flags and arguments being sent to the package clang commands that are not from Xcode build settings. It seems the build system is selecting defaults for packages. 
+* Buld From Command Line: It seems like adding an command line flags negates the ones in teh Package settings.
+

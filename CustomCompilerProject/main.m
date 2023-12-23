@@ -12,9 +12,13 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
     }
+
+    int x = 0;
+    if(x == 0); // <-- Note the accidental semicolon here, creating an empty body
+    {
+        printf("Incrementing x\n");
+        x++;
+    }
+
     return 0;
 }
-
-//void myMethod() {
-//
-//}

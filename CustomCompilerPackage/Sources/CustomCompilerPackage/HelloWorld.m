@@ -14,4 +14,12 @@
 
 void myMethod() {
 
+    int x = 0;
+    if(x == 0); // <-- Note the accidental semicolon here, creating an empty body
+    {
+        printf("Incrementing x\n");
+        x++;
+    }
+
+    while (true) {}
 }

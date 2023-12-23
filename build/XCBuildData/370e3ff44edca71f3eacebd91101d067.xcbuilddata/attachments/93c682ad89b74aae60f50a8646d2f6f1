@@ -1,0 +1,4 @@
+module CustomCompilerPackage {
+umbrella "/Users/bill/dev/personal/AppleIssueReports/CustomCompilerPackage/Sources/CustomCompilerPackage"
+export *
+}
