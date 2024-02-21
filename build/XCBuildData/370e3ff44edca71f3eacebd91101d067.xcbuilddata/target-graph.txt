@@ -1,6 +1,0 @@
-Target dependency graph (3 targets)
-Target 'CustomCompilerProject' in project 'CustomCompilerProject'
-➜ Explicit dependency on target 'CustomCompilerPackage' in project 'CustomCompilerPackage'
-Target 'CustomCompilerPackage' in project 'CustomCompilerPackage'
-➜ Explicit dependency on target 'CustomCompilerPackage' in project 'CustomCompilerPackage'
-Target 'CustomCompilerPackage' in project 'CustomCompilerPackage' (no dependencies)
